@@ -1,6 +1,6 @@
 # 📚 Gestor de Estudios
 
-Aplicación web desarrollada con **React** para organizar y visualizar materias, notas, asistencia, recordatorios y más. Ideal para estudiantes que buscan centralizar su vida académica en una interfaz clara e intuitiva.
+Aplicación web desarrollada con **React** para organizar y visualizar materias, notas, asistencia, recordatorios y más. Pensada para estudiantes que buscan organizar su vida académica en una interfaz clara e intuitiva.
 
 ---
 
