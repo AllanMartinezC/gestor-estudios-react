@@ -2,7 +2,7 @@ Gestor de Estudios 📚
 Aplicación web desarrollada con React para organizar y visualizar materias, notas, asistencia, recordatorios y más. Pensada para estudiantes que buscan centralizar la gestión de su vida académica en una sola interfaz intuitiva.
 
 
-
+![Captura de pantalla](./public/image.png)
 Funcionalidades principales
 📘 Registro de materias con información de profesor, horario y asistencia.
 🧾 Carga y visualización de notas por materia.
