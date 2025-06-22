@@ -18,7 +18,6 @@ Aplicación web desarrollada con **React** para organizar y visualizar materias,
 - 📊 Visualización del progreso académico mediante una barra de asistencia.
 - 📅 Calendario interactivo para marcar fechas importantes.
 - 🔔 Sección de recordatorios y notas rápidas.
-- 🎯 Panel de objetivos con opción de marcarlos como completados.
 
 ---
 
