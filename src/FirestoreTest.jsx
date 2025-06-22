@@ -15,7 +15,6 @@ import {
   eachDayOfInterval
 } from "date-fns";
 
-// 🗓️ Componente Calendario lateral
 function CalendarioLateral({ onSeleccionarFecha }) {
   const dias = eachDayOfInterval({
     start: startOfMonth(new Date()),
@@ -75,14 +74,14 @@ function FirestoreTest() {
   ]);
   const [fechasImportantes, setFechasImportantes] = useState([]);
 
- // ✅ Agrega una fecha importante si no está ya incluida
+
 const agregarFechaImportante = (fecha) => {
   if (!fechasImportantes.includes(fecha)) {
     setFechasImportantes([...fechasImportantes, fecha]);
   }
 };
 
-// ✅ Obtiene materias desde Firestore al montar el componente
+
 const obtenerMaterias = async () => {
   const querySnapshot = await getDocs(collection(db, "materias"));
   const docs = querySnapshot.docs.map((doc) => ({
@@ -96,7 +95,7 @@ useEffect(() => {
   obtenerMaterias();
 }, []);
 
-// ✅ Guarda una nueva materia
+
 const guardarMateria = async () => {
   if (!nombre) return;
   try {
@@ -118,7 +117,7 @@ const guardarMateria = async () => {
   }
 };
 
-// ✅ Agrega una nota ponderada si no excede el 100%
+
 const agregarNotaPonderada = () => {
   const nota = parseFloat(notaTemp);
   const porcentaje = parseFloat(porcentajeTemp);
@@ -139,14 +138,14 @@ const agregarNotaPonderada = () => {
   setPorcentajeTemp("");
 };
 
-// ✅ Alterna el estado de un objetivo (tachado o no)
+
 const toggleObjetivo = (index) => {
   const nuevosObjetivos = [...objetivos];
   nuevosObjetivos[index].completado = !nuevosObjetivos[index].completado;
   setObjetivos(nuevosObjetivos);
 };
 
-// ✅ Agrega una nota rápida al panel derecho
+
 const agregarNotaRapida = () => {
   if (notaRapida.trim()) {
     setListaNotasRapidas([...listaNotasRapidas, notaRapida.trim()]);
@@ -216,7 +215,7 @@ const calcularResultado = () => {
       padding: "40px 16px",
       boxSizing: "border-box"
     }}>
-      {/* Capa oscura sobre el fondo */}
+
       <div style={{
         position: "absolute",
         top: 0,
@@ -227,7 +226,7 @@ const calcularResultado = () => {
         zIndex: 0
       }} />
 
-      {/* Contenido encima del fondo */}
+
       <div style={{ position: "relative", zIndex: 1 }}>
         <div style={{
           display: "flex",
@@ -235,10 +234,10 @@ const calcularResultado = () => {
           alignItems: "flex-start",
           gap: "50px"
         }}>
-          {/* Calendario */}
+
          <div style={{ width: "220px", display: "flex", flexDirection: "column", gap: "20px" }}>
             <CalendarioLateral onSeleccionarFecha={agregarFechaImportante} />
-  {/* 📅 Fechas importantes */}
+
 <div style={{
   background: "#2c2c2c",
   color: "#fff",
@@ -260,7 +259,7 @@ const calcularResultado = () => {
   )}
 </div>
 
-  {/* 🧮 Calculadora de notas ponderadas */}
+
   <div style={{
     background: "#2c2c2c",
     color: "#fff",
@@ -309,7 +308,7 @@ const calcularResultado = () => {
   </div>
 </div>
 
-          {/* Centro: Formulario y materias */}
+
           <div style={{
             width: "100%",
             maxWidth: "600px",
@@ -318,7 +317,7 @@ const calcularResultado = () => {
           }}>
             <h1 style={{ textAlign: "center" }}>🎓 Gestor de Estudios</h1>
 
-            {/* Formulario */}
+
             <div style={{ marginTop: "20px" }}>
               <h2>Agregar nueva materia</h2>
               <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -330,7 +329,7 @@ const calcularResultado = () => {
               </div>
             </div>
 
-            {/* Materias registradas */}
+  
             <div style={{ marginTop: "30px" }}>
               <h3>Materias registradas</h3>
               <div style={{
@@ -379,8 +378,6 @@ const calcularResultado = () => {
               </div>
             </div>
 
-            {/* Detalles */}
-            {/* Detalles */}
 <div style={{ marginTop: "40px" }}>
   <h3 style={{ color: "#6cf" }}>📚 Detalles de la materia</h3>
   {materia ? (
@@ -390,7 +387,6 @@ const calcularResultado = () => {
       <p><strong>Horario:</strong> {materia.horario}</p>
       <p><strong>Asistencia:</strong> {materia.asistencia}%</p>
 
-      {/* 📄 Sección de Notas */}
       <div style={{ marginTop: "20px" }}>
         <h4 style={{ color: "#6cf" }}>📄 Notas</h4>
         {materia.notas && materia.notas.length > 0 ? (
@@ -426,7 +422,6 @@ const calcularResultado = () => {
 
           </div>
 
-          {/* Panel derecho */}
           <div style={{
             width: "600px",
             display: "grid",
@@ -434,7 +429,6 @@ const calcularResultado = () => {
             gap: "20px",
             alignContent: "flex-start"
           }}>
-            {/* 💬 Notas rápidas */}
             <div style={{
               background: "#2b2b2b",
               color: "#fff",
@@ -460,7 +454,6 @@ const calcularResultado = () => {
 
             </div>
 
-            {/* 📊 Progreso */}
             <div style={{
               background: "#2b2b2b",
               color: "#fff",
@@ -488,7 +481,6 @@ const calcularResultado = () => {
               </p>
             </div>
 
-            {/* 🎯 Objetivos */}
             <div style={{
               background: "#2b2b2b",
               color: "#fff",
@@ -496,7 +488,6 @@ const calcularResultado = () => {
               borderRadius: "12px"
             }}>
               <h4>🎯 Objetivos</h4>
-             {/* 📝 Notas rápidas visualizadas */}
 {listaNotasRapidas.length > 0 && (
   <div style={{ marginTop: "20px" }}>
     <h4>📝 Notas rápidas</h4>
@@ -509,8 +500,6 @@ const calcularResultado = () => {
 )}
 
             </div>
-
-            {/* 🔔 Recordatorios */}
             <div style={{
               background: "#2b2b2b",
               color: "#fff",
