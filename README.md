@@ -1,13 +1,59 @@
-# React + Vite
+Gestor de Estudios 📚
+Aplicación web desarrollada con React para organizar y visualizar materias, notas, asistencia, recordatorios y más. Pensada para estudiantes que buscan centralizar la gestión de su vida académica en una sola interfaz intuitiva.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Funcionalidades principales
+📘 Registro de materias con información de profesor, horario y asistencia.
+🧾 Carga y visualización de notas por materia.
+🧮 Calculadora de notas ponderadas con porcentajes personalizados.
+📊 Visualización del progreso académico mediante una barra de asistencia.
+📅 Calendario interactivo para marcar fechas importantes.
+🔔 Sección de recordatorios y notas rápidas.
+🎯 Panel de objetivos con posibilidad de marcarlos como completados.
 
-## Expanding the ESLint configuration
+Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# gestor-estudios-react
+React para el desarrollo de la interfaz.
+Firebase (Firestore) para almacenamiento y sincronización de datos en tiempo real.
+Date-fns para el manejo de fechas.
+
+Instalación local
+Clonar el repositorio:
+
+bash
+git clone https://github.com/AllanMartinezC/gestor-estudios-react.git
+
+Instalar dependencias:
+
+bash
+
+cd gestor-estudios-react
+npm install
+Configurar Firebase:
+
+Crear un proyecto en Firebase Console.
+
+Activar Firestore.
+
+Reemplazar la configuración en firebase/config.js con los datos del proyecto.
+
+Iniciar el servidor local:
+
+bash
+npm run dev
+
+
+
+
+Estado del proyecto
+✅ Funcional
+🚧 Posibles mejoras: sistema de autenticación, historial de cambios, exportación de datos.
+
+Licencia
+Este proyecto está bajo la licencia MIT.
+
+## ✨ Autor
+
+Desarrollado con 💻 por **Allan Martinez**
+
