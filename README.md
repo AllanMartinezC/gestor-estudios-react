@@ -34,7 +34,7 @@ Aplicación web desarrollada con **React** para organizar y visualizar materias,
 
 1. **Clonar el repositorio**
 
-bash
+usando bash: 
 
 git clone https://github.com/AllanMartinezC/gestor-estudios-react.git
 cd gestor-estudios-react
@@ -51,7 +51,7 @@ Reemplazar la configuración en firebase/config.js con los datos del proyecto.
 
 Iniciar el servidor local
 
-bash
+usando bash: 
 
 npm run dev
 
@@ -69,4 +69,4 @@ Este proyecto está bajo la licencia MIT.
 
 ✨ Autor
 
-Desarrollado con 💻 por Allan Martinez
+Desarrollado por Allan Martinez
